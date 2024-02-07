@@ -1,0 +1,21 @@
+{
+  "name": "pokemart",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server --ignore client",
+    "start:dev": "concurrently \"cd server && pnpm run start\" \"cd client && pnpm run dev\"",
+    "install": "cd server && pnpm i && cd ../client && pnpm i",
+    "seed": "cd server && pnpm run seed",
+    "build": "cd client && pnpm run build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "prettier": "^3.2.5"
+  }
+}
